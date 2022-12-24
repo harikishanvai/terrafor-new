@@ -69,3 +69,7 @@ output "URL_SHELL" {
   value = var.URL_SHELL
 }
 
+variable "URL1" {}
+output "URL1" {
+  value = var.URL1
+}
