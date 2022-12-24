@@ -53,3 +53,5 @@ value = var.sample5["number"]
 output "sample2" {
   value = var.sample2
 }
+
+variable "URL" {}
