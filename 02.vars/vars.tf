@@ -27,7 +27,7 @@ variable "sample4" {
   type = list(string)
   default =  [
     "Hello",
-    1000,
+    10000,
     true,
     "World"
   ]
@@ -68,3 +68,4 @@ variable "URL_SHELL" {}
 output "URL_SHELL" {
   value = var.URL_SHELL
 }
+
