@@ -24,7 +24,7 @@ variable "sample3" {
 
 ## Variable types
 variable "sample4" {
-  type = "list"
+  type = list(string)
   default =  [
     "Hello",
     1000,
@@ -34,7 +34,7 @@ variable "sample4" {
 }
 
 variable "sample5" {
-  type = "map"
+  type = map(string)
   default =  {
     string = "Hello",
     number = 100,
