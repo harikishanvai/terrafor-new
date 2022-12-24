@@ -49,3 +49,7 @@ output "sample4-1" {
 output "sample5-1" {
 value = var.sample5["number"]
 }
+
+output "sample2" {
+  value = var.sample2
+}
