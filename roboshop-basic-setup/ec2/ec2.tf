@@ -15,6 +15,7 @@ provisioner "remote-exec" {
     user     = "centos"
     password = "DevOps321"
   }
+}
   inline = [
     "ansble-pull -u https://github.com/raghudevops63/ansible roboshop.yml -e HOST -e role_name=$(var.COMPONENT) -e APP_VERSION=$(var.APP_VERSION)"
   ]
