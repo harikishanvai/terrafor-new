@@ -1,7 +1,21 @@
 module "component" {
-  count       = length(var.COMPONENTS)
+  for_each = var.ALL_COMPONENTS
   source      = "./ec2"
-  COMPONENT   = var.COMPONENTS[count.index]
-  APP_VERSION = var.APP_VERSION[count.index]
+  COMPONENT   = each.key
+  APP_VERSION = each.value.app_version
 }
 
+
+
+//
+//resource "null_resource" "sample" {
+//  triggers = {
+//    abc = timestamp()
+//  }
+//  for_each = var.sample
+//  provisioner "local-exec" {
+//    command = <<EOF
+//echo COMPONENT = ${each.key}, APP_VERSION = ${each.value}
+//EOF
+//  }
+//}

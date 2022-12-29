@@ -1,4 +1,4 @@
-resource "aws_security_group" "allow_tls" {
+resource "aws_security_group" "allow-all-from-public" {
   name        = "allow_$(var.COMPONENT)"
   description = "Allow TLS inbound traffic"
 
@@ -23,6 +23,3 @@ resource "aws_security_group" "allow_tls" {
   }
 }
 
-output "sg_id" {
-  value = aws_security_group.allow_tls.id
-}
